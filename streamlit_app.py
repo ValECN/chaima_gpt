@@ -55,6 +55,6 @@ if prompt := st.chat_input(disabled=not (hf_email and hf_pass)):
         with st.chat_message("assistant"):
             with st.spinner("Thinking..."):
                 response = generate_response(prompt_with_context, hf_email, hf_pass) 
-                st.write(response) 
+                st.write(response, width=300) 
         message = {"role": "assistant", "content": response}
         st.session_state.messages.append(message)
