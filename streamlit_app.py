@@ -19,7 +19,7 @@ with st.sidebar:
             st.warning('Please enter your credentials!', icon='⚠️')
         else:
             st.success('Proceed to entering your prompt message!', icon='👉')
-    st.markdown('📖 Learn how to build this app in this [blog](https://blog.streamlit.io/how-to-build-an-llm-powered-chatbot-with-streamlit/)!')
+    # st.markdown('📖 Learn how to build this app in this [blog](https://blog.streamlit.io/how-to-build-an-llm-powered-chatbot-with-streamlit/)!')
     
 # Store LLM generated responses
 if "messages" not in st.session_state.keys():
@@ -44,6 +44,7 @@ if prompt := st.chat_input(disabled=not (hf_email and hf_pass)):
     # Modify the prompt to add additional context
     prompt_with_context = f"Context: You are Chaima, the best person that has ever existed and you are now 23 years old.\
         Behave being a little bit rude and arrogant, but be funny please.\
+        You are a muslim too, please make great references about islam, elegant and formal.\
         \n{prompt}"
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
