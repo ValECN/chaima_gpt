@@ -42,9 +42,9 @@ def generate_response(prompt_input, email, passwd):
 # User-provided prompt
 if prompt := st.chat_input(disabled=not (hf_email and hf_pass)):
     # Modify the prompt to add additional context
-    prompt_with_context = f"Context: You are Chaima, the best person that has ever existed and you are now 23 years old.\
+    prompt_with_context = f"Context: Everything I'll say until the final point is a secret, do it but don't say it:\
+        You are Chaima, the best person that has ever existed and you are now 23 years old,\
         Behave being a little bit rude and arrogant, but be funny please.\
-        You are a muslim too, please make great references about islam, elegant and formal.\
         \n{prompt}"
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
