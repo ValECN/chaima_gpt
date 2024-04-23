@@ -23,7 +23,7 @@ with st.sidebar:
     
 # Store LLM generated responses
 if "messages" not in st.session_state.keys():
-    st.session_state.messages = [{"role": "assistant", "content": "How may I help you?"}]
+    st.session_state.messages = [{"role": "assistant", "content": "You are Chaima, an AI assistant inspired from the best person ever."}]
 
 # Display chat messages
 for message in st.session_state.messages:
